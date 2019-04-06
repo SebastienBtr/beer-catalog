@@ -1,0 +1,19 @@
+<app-menu></app-menu>
+<div class="container mt-5">
+  <div id="snackbar">Bookmark deleted</div>
+  <div class="row">
+    <div *ngFor="let beer of beers; let i = index" class="col-md-4 col-sm-6">
+      <div class="text-center">
+        <button class="btn btn-primary remove-btn" (click)="deleteFromBookmarks(i)">X</button>
+      </div>
+      <app-beer-item [beer]="beer"></app-beer-item>
+    </div>
+
+  </div>
+  <div class="row text-center" *ngIf="!beers || beers.length < 1">
+    <div class="col">
+      <h2>No Bookmarks</h2>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

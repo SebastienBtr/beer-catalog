@@ -1,0 +1,28 @@
+<app-menu></app-menu>
+<div class="container mt-5">
+  <div class="input-group mt-2 mb-5">
+    <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="searchQuery" (keyup.enter)="search()">
+    <div class="input-group-append">
+      <span class="input-group-text" (click)="search()">search</span>
+    </div>
+  </div>
+  <div class="row">
+    <app-beer-item class="col-md-4 col-sm-6" *ngFor="let beer of beers" [beer]="beer"></app-beer-item>
+  </div>
+
+  <div class="row text-center" *ngIf="showPager">
+    <div class="col">
+      <p>
+        <span (click)="previousPage()" class="pager pr-3">&#60; Previous page</span>
+        <span (click)="nextPage()" class="pager pl-3">Next page &#62;</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="row text-center" *ngIf="noResult">
+    <div class="col">
+      <p>No results for <strong>{{lastSearch}}</strong></p>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

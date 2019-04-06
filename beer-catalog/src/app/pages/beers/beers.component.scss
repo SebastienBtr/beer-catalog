@@ -1,0 +1,19 @@
+.form-control {
+    border-radius: 2.25rem;
+    padding: 1.375rem 1.75rem;
+}
+
+.input-group-text {
+    cursor: pointer;
+    border-radius: 1.25rem;
+}
+
+.form-control:focus {
+    border-color: #fec652;
+    box-shadow: 0 0 0 0.2rem rgba(248, 219, 51, 0.25);
+}
+
+.pager {
+    cursor: pointer;
+    color: #fec652;
+}

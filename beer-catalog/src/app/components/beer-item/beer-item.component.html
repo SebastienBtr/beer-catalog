@@ -1,0 +1,22 @@
+<div *ngIf="beer" class="card mb-5" (click)="viewBeer()">
+  <div class="row p-3">
+    <div class="col photo-col text-center">
+      <img src="{{beer.image_url}}" onerror="this.onerror=null;this.src='assets/beer.svg';">
+    </div>
+  </div>
+  <div class="row ml-3">
+    <div class="col p-3">
+      <h2>{{beer.name}}</h2>
+    </div>
+  </div>
+  <div class="row ml-3">
+    <div class="col">
+      <p class="info">ABV: {{beer.abv}}%</p>
+    </div>
+  </div>
+  <div class="row ml-3">
+    <div class="col">
+      <p class="info">First brewed: {{beer.first_brewed}}</p>
+    </div>
+  </div>
+</div>

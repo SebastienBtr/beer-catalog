@@ -1,0 +1,40 @@
+<app-menu></app-menu>
+<div class="container mt-5">
+  <div id="snackbar">Bookmark added</div>
+  <div class="row" *ngIf="beer">
+    <div class="col-md-6 text-center">
+      <img class="image" src="{{beer.image_url}}" onerror="this.onerror=null;this.src='assets/beer.svg';">
+    </div>
+    <div class="col-md-6 mt-5">
+      <div class="row">
+        <div class="col">
+          <h2>{{beer.name}}</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>
+            <span>ABV: {{beer.abv}}</span>
+            <span class="pl-4">IBU: {{beer.ibu}}</span>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>First brewed: {{beer.first_brewed}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>{{beer.description}}</p>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <button class="btn btn-primary" (click)="addToBookmarks()">Add to bookmarks</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
